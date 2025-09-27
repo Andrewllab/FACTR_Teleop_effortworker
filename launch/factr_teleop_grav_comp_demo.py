@@ -31,7 +31,7 @@ def generate_launch_description():
         output='screen',
         emulate_tty=True,
         parameters=[
-            {"config_file": "grav_comp_demo.yaml"}
+            {"config_file": config_path}
         ]
     )
 
