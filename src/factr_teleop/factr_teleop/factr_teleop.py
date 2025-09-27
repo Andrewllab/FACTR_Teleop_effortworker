@@ -67,7 +67,8 @@ class FACTRTeleop(Node, ABC):
         super().__init__('factr_teleop')
 
         config_file_name = self.declare_parameter('config_file', '').get_parameter_value().string_value
-        config_path = os.path.join(get_workspace_root(), f"src/factr_teleop/factr_teleop/configs/{config_file_name}")
+        # config_path = os.path.join(get_workspace_root(), f"src/factr_teleop/factr_teleop/configs/{config_file_name}")
+        config_path = config_file_name
         with open(config_path, 'r') as config_file:
             self.config = yaml.safe_load(config_file)
         
