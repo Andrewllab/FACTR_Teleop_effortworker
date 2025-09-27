@@ -139,7 +139,7 @@ class DynamixelDriver(DynamixelDriverProtocol):
                     self._portHandler, dxl_id, ADDR_TORQUE_ENABLE, torque_value
                 )
                 if dxl_comm_result != COMM_SUCCESS or dxl_error != 0:
-                    raise RuntimeError(f"Failed to set torque mode for Dynamixel with ID {dxl_id}")
+                    raise RuntimeError(f"Failed to set torque mode for Dynamixel with ID {dxl_id}, error {dxl_error}")
         self._torque_enabled = enable
 
     def close(self):
