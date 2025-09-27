@@ -18,6 +18,10 @@
 
 from launch import LaunchDescription
 from launch_ros.actions import Node
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+config_path = script_dir + "/../src/factr_teleop/factr_teleop/configs/grav_comp_demo.yaml"
 
 def generate_launch_description():
     factr_teleop_grav_comp_demo = Node(
